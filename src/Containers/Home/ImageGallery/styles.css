@@ -1,0 +1,8 @@
+.galleryPost {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.mainImageWrapper{
+}
