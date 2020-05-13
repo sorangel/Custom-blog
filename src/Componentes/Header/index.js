@@ -1,16 +1,12 @@
 import React from 'react';
 import "./styles.css";
+import {NavLink} from "react-router-dom";
 
 
 const Header = (props) => {
     return(
         <header className="header">
-            <nav className="headerMenu">
-                <a href="#">Home</a>
-                <a href="#">About Us</a>
-                <a href="#">Contact Us</a>
-            </nav>
-            <div>
+            <div className="textTitle">
 
                 Personal Blog
             </div>
@@ -19,4 +15,4 @@ const Header = (props) => {
 
 }
 
-export default Header
+export default Header;

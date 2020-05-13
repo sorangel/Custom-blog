@@ -32,6 +32,7 @@ const Home  = (props) => {
             <Layout>
                 <RecentPosts style={{width: '70%'}}/>
             </Layout>
+
         </div>
     );
 };

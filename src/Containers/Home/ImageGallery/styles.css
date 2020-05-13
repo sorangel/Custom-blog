@@ -1,8 +1,19 @@
 .galleryPost {
     display: flex;
     flex-direction: row;
+    padding: 10px;
+}
+
+.sideImageWrapper div{
+    width: 100%;
+    height: 500px;
 }
 
 
-.mainImageWrapper{
+.sideImageWrapper div img{
+    width: 350px;
+    padding: 10px 0 10px;
+    max-height: 100%;
+    object-fit: cover;
 }
+

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import "./styles.css";
 import Card from "../IU/Card";
-import blogPost from "../blogPost";
+import blogPost from "../../Data/blog.json";
+
 
 const BlogPost = (props) => {
 
@@ -14,17 +15,18 @@ const BlogPost = (props) => {
     blogImage: "" ,
     blogText: ""
   });
-  const [slug, setSlug] = useState('');
+  const [memories, setMemories] = useState('');
 
 
   useEffect(() => {
-    const slug = props.match.params.slug;
-    const post = blogPost.data.find(post => post.slug == slug);
-    setPost(post);
-    setSlug(slug)
-  }, [post, props.match.params.slug]);
+    const memories = props.match.params.memories;
+    const _post = blogPost.data.find(post => post.memories === memories);
+    debugger;
+    setPost(_post);
+    setMemories(memories)
+  }, [post, props.match.params.memories]);
 
-  if(post.blogImage == "") return null;
+  if(post.blogImage === "") return null;
 
   return(
       <div className="blogPostContainer">
@@ -36,7 +38,7 @@ const BlogPost = (props) => {
           </div>
 
           <div className="postImageContainer">
-
+            <img src="" alt="Post Image" />
 
           </div>
 
@@ -51,4 +53,4 @@ const BlogPost = (props) => {
 
 }
 
-export default BlogPost
+export default BlogPost;
